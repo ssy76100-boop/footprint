@@ -6,7 +6,7 @@
 <title>AI·디지털 교육 발자취</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Noto+Serif+KR:wght@900&display=swap" rel="stylesheet">
 <style>
 /*
 VOICE  : 밝고 단정한 학교 연구 사이트 대문. 심사위원이 휴대폰으로 3초 안에 읽는 화면.
@@ -460,6 +460,30 @@ html.rv-on .tl.rv-line.in::before{transform:none}
 @media (max-width:860px){html.rv-on .tl.rv-line::before{transform:scaleY(0);transform-origin:top}html.rv-on .tl.rv-line.in::before{transform:none}}
 @media (prefers-reduced-motion:reduce){html.rv-on .rv{opacity:1;translate:none;scale:none;transition:none}html.rv-on .tl.rv-line::before{transform:none}}
 
+
+/* ---------- 언론에 소개된 발자취 ---------- */
+.nw-h{margin-bottom:20px}
+.news{padding:clamp(20px,3vw,34px);border-radius:24px;background:var(--card);border:1px solid var(--line);box-shadow:0 12px 30px -20px rgba(43,58,140,.45)}
+.nw-top{display:flex;align-items:center;flex-wrap:wrap;gap:8px 14px;padding-bottom:14px;border-bottom:3px double light-dark(#CBD1EC,#3B4580)}
+.nw-src{padding:5px 12px;border-radius:6px;font-size:14px;font-weight:900;letter-spacing:.02em;color:#fff;background:#1E2A6E}
+.nw-date{font-size:14px;color:var(--band-sub)}
+.nw-title{margin:16px 0 6px;font-family:"Noto Serif KR","Noto Sans KR",serif;font-size:clamp(21px,2.4vw,30px);font-weight:900;line-height:1.35;letter-spacing:-.02em;color:var(--band-ink);text-wrap:balance}
+.nw-sub{margin:0 0 20px;font-size:16px;font-weight:700;color:var(--a2)}
+.nw-body{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(16px,2.6vw,32px);align-items:start}
+.nw-photos{margin:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}
+.nw-ph{position:relative;display:grid;place-items:center;align-content:center;gap:6px;aspect-ratio:4/3;border-radius:14px;overflow:hidden;color:var(--band-sub);font-size:13.5px;
+  background:repeating-linear-gradient(135deg,light-dark(#F2F4FD,#1A2150) 0 14px,light-dark(#ECEFFB,#1D2557) 14px 28px)}
+.nw-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.nw-cap{grid-column:1 / -1;font-size:12.5px;color:var(--band-sub)}
+.nw-points{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.nw-points li{display:flex;flex-direction:column;gap:2px;padding:0 0 12px 16px;border-left:3px solid var(--a2);border-bottom:1px dashed var(--line)}
+.nw-points li:last-child{border-bottom:0;padding-bottom:0}
+.nw-points b{font-size:16.5px;font-weight:900;color:var(--band-ink)}
+.nw-points span{font-size:15px;color:var(--band-sub)}
+.nw-link{display:inline-flex;align-items:center;gap:6px;margin-top:20px;min-height:44px;padding:0 18px;border-radius:999px;font-weight:700;font-size:15px;color:#fff;text-decoration:none;background:#1E2A6E}
+.nw-link:focus-visible{outline:3px solid var(--a2);outline-offset:3px}
+@media (max-width:860px){.nw-body{grid-template-columns:minmax(0,1fr)}}
+
 /* 세로 화면 */
 @media (max-aspect-ratio:1/1){
   h1{font-size:clamp(24px,7vw,32px);line-height:1.15}
@@ -694,6 +718,34 @@ html.rv-on .tl.rv-line.in::before{transform:none}
       </div>
     </section>
 
+    <section class="band soft" id="s-news">
+      <div class="wrap">
+        <h2 class="sec-h nw-h">언론에 소개된 발자취</h2>
+        <article class="news">
+          <header class="nw-top">
+            <span class="nw-src">세종교육신문</span>
+            <span class="nw-date">2026. 11. 4. · 유초등 · 학교이야기</span>
+          </header>
+          <h3 class="nw-title">세종 으뜸초 “AI는 어려운 기술이 아니라 상상을 현실로 만드는 친구”… 「2026 으뜸 AI 페스티벌」 열어</h3>
+          <p class="nw-sub">4족 보행 로봇부터 바이브 코딩 앱까지 체험·전시 병행</p>
+          <div class="nw-body">
+            <figure class="nw-photos">
+              <div class="nw-ph"><img src="img/news-1.jpg" alt="AI 페스티벌 체험 부스에서 학생이 회로 도구로 활동하는 모습 (사진: 세종교육신문)" loading="lazy"></div>
+              <div class="nw-ph"><img src="img/news-2.jpg" alt="학생 학습공동체 나눔·전시회에서 학생들이 작품을 체험하는 모습 (사진: 세종교육신문)" loading="lazy"></div>
+            <figcaption class="nw-cap">사진: 세종교육신문</figcaption>
+            </figure>
+            <ul class="nw-points">
+              <li><b>전교생 440명 참여</b><span>11. 3. 4~6학년, 11. 24. 1~3학년이 이어서 참여</span></li>
+              <li><b>체험과 전시를 함께</b><span>미래기술 체험 부스 5곳과 학생 학습공동체 나눔·전시회</span></li>
+              <li><b>학생이 만든 AI 결과물</b><span>생성형 AI 그림책, 다감각 전자책, 바이브 코딩 앱 전시</span></li>
+              <li><b>AI·디지털 교육 환경</b><span>크롬북·스마트패드 500여 대로 1인 1디바이스, Wi-Fi 6 무선망, 디지털 튜터 지원 체계</span></li>
+            </ul>
+          </div>
+          <a class="nw-link" href="https://www.sje.kr/news/articleView.html?idxno=10435" target="_blank" rel="noopener">기사 원문 보기 <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+        </article>
+      </div>
+    </section>
+
     <section class="band nx" id="s-next">
       <div class="wrap">
         <span class="nx-tag">2027~</span>
@@ -849,7 +901,7 @@ html.rv-on .tl.rv-line.in::before{transform:none}
       ['.sec-h, .sub-h2, .done-k, .done-h, .done-lead, .nx-tag', ''],
       ['#timeline > li', 'stagger'], ['.done-nav button', 'stagger'], ['.steps4 li', 'stagger'],
       ['.shelf', ''], ['.support', 'rv-s'], ['.lessons .lesson', 'stagger'],
-      ['.train', ''], ['.db-fig', ''], ['.nx-col', 'stagger'], ['.nx-goal', 'rv-s']
+      ['.train', ''], ['.db-fig', ''], ['.news', ''], ['.nw-points li', 'stagger'], ['.nx-col', 'stagger'], ['.nx-goal', 'rv-s']
     ];
     const els = [];
     for (const [sel, mode] of groups) {
